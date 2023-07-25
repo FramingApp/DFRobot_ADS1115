@@ -11,6 +11,7 @@
 '''
 
 import sys
+import os
 sys.path.append('../')
 import time
 
@@ -31,10 +32,11 @@ while True :
     ads1115.set_gain(ADS1115_REG_CONFIG_PGA_6_144V)
     #Get the Digital Value of Analog of selected channel
     adc0 = ads1115.read_voltage(0)
-    time.sleep(0.2)
-    adc1 = ads1115.read_voltage(1)
-    time.sleep(0.2)
-    adc2 = ads1115.read_voltage(2)
-    time.sleep(0.2)
-    adc3 = ads1115.read_voltage(3)
-    print "A0:%dmV A1:%dmV A2:%dmV A3:%dmV"%(adc0['r'],adc1['r'],adc2['r'],adc3['r'])
+    time.sleep(0.001)
+    # adc1 = ads1115.read_voltage(1)
+    # time.sleep(0.2)
+    # adc2 = ads1115.read_voltage(2)
+    # time.sleep(0.2)
+    # adc3 = ads1115.read_voltage(3)
+    # print(f"A0:{adc0['r']}mV A1:{adc1['r']}mV A2:{adc2['r']}mV A3:{adc3['r']}mV")
+    print(f"v: {adc0['r']} mV   Code: {adc0['c']}")
