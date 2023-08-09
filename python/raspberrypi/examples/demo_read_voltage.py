@@ -36,7 +36,7 @@ for i in range(2000):
     # Sets the gain and input voltage range.
     ads1115.set_gain(ADS1115_REG_CONFIG_PGA_6_144V)
     # Get the Digital Value of Analog of selected channel
-    adc0 = ads1115.read_voltage(1)
+    adc0 = ads1115.read_voltage(0)
     time.sleep(0.001)
     # adc1 = ads1115.read_voltage(1)
     # time.sleep(0.2)
